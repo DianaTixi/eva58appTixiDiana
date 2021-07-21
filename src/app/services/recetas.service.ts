@@ -23,9 +23,8 @@ export class RecetasService {
   }
 
   getRecetas(): Observable <any[]>{
-    return this.afs.collection("recetas",
-    ref => ref.where('nombre','==', 'Lassana')).valueChanges();
-    //return this.afs.collection("recetas").valueChanges();
+    
+    return this.afs.collection("recetas").valueChanges();
   }
 
   getBusqueda(nombre: string) : Observable <any[]>{
